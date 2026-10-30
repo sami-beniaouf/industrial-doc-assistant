@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Source PDFs (third-party documents, not redistributed)
+data/raw/*
+!data/raw/.gitkeep

@@ -27,4 +27,4 @@ After reading the first results, four entries were corrected because the expecte
 python scripts/evaluate.py --runs 3
 ```
 
-Retrieval is deterministic. Generation and judging are not, hence several runs. The judge is the same chat model that answers, which is a limitation: failures are reviewed by hand.
+Retrieval is almost deterministic (the vector search is approximate and can vary slightly between runs); generation and judging are not, hence several runs. Retrieval metrics are computed on the first run. The judge is the same chat model that answers, which is a limitation: failures are reviewed by hand.

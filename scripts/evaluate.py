@@ -3,6 +3,7 @@
 Run from the repository root:
     python scripts/evaluate.py             one run
     python scripts/evaluate.py --runs 3    repeat generation and judging 3 times (the model is not deterministic)
+    python scripts/evaluate.py --questions eval/questions_holdout.json --out eval/results_holdout.json
 
 For every question:
   - retrieval is run in the three modes (keyword, vector, hybrid) and compared with the expected pages;
@@ -29,7 +30,15 @@ from docassistant.search import MODES, retrieve  # noqa: E402
 
 sys.stdout.reconfigure(encoding="utf-8")
 TOP = 5
-RUNS = int(sys.argv[sys.argv.index("--runs") + 1]) if "--runs" in sys.argv else 1
+
+
+def option(name: str, default: str) -> str:
+    return sys.argv[sys.argv.index(name) + 1] if name in sys.argv else default
+
+
+RUNS = int(option("--runs", "1"))
+QUESTIONS_FILE = ROOT / option("--questions", "eval/questions.json")
+RESULTS_FILE = ROOT / option("--out", "eval/results.json")
 
 
 def with_retry(fn, attempts: int = 5):
@@ -52,7 +61,7 @@ def judge(question: str, expected: str, text: str) -> bool:
     return parse_verdict(response.choices[0].message.content)
 
 
-questions = json.loads((ROOT / "eval" / "questions.json").read_text(encoding="utf-8"))
+questions = json.loads(QUESTIONS_FILE.read_text(encoding="utf-8"))
 runs: list[list[dict]] = [[] for _ in range(RUNS)]
 details = []
 
@@ -65,7 +74,7 @@ for q in questions:
     for run in range(RUNS):
         result = with_retry(lambda: answer(q["question"], top=TOP, mode="hybrid"))
         passages = [(p.source, p.page) for p in result.passages]
-        if run == 0:  # retrieval metrics come from the first run (retrieval is deterministic)
+        if run == 0:  # retrieval metrics come from the first run (the approximate vector search can vary slightly)
             retrieved["hybrid"] = passages
             for mode in ("keyword", "vector"):
                 retrieved[mode] = [(p.source, p.page) for p in with_retry(lambda: retrieve(q["question"], top=TOP, mode=mode))]
@@ -106,7 +115,7 @@ output = {
     "summaries": summaries,
     "questions": details,
 }
-(ROOT / "eval" / "results.json").write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
+RESULTS_FILE.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
 
 s0 = summaries[0]
 na, nr = s0["n_answerable"], s0["n_refusals"]
@@ -146,4 +155,4 @@ good = [i for i in fail_counts if i not in to_review]
 random.seed(0)
 print("\nTO REVIEW by hand (question id: number of failing runs): " + (str(to_review) if to_review else "none"))
 print(f"Spot-check (random, never failed): {sorted(random.sample(good, min(5, len(good))))}")
-print("Details: eval/results.json")
+print(f"Details: {RESULTS_FILE.relative_to(ROOT)}")

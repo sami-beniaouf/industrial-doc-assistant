@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "category": "closed",
+    "question": "Faut-il porter des gants de protection sur une cisaille guillotine ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Oui, des gants de protection contre les coupures (au moins le niveau 3).",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        26
+      ]
+    ]
+  },
+  {
+    "id": 2,
+    "category": "closed",
+    "question": "Peut-on utiliser une tronçonneuse au-dessus du niveau des épaules ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Non, il ne faut jamais l'utiliser au-dessus du niveau des épaules.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        17
+      ]
+    ]
+  },
+  {
+    "id": 3,
+    "category": "closed",
+    "question": "Un jeune de 16 ans peut-il utiliser un pont roulant ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Non : l'utilisation est interdite aux jeunes de moins de 18 ans, sauf dans le cadre de la formation professionnelle initiale.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        46
+      ]
+    ]
+  },
+  {
+    "id": 4,
+    "category": "trap",
+    "question": "Le soudage est-il interdit aux personnes de moins de 18 ans ?",
+    "expected_behavior": "refuse",
+    "expected_answer": "Refus : la fiche soudage (p.36-37) ne mentionne aucune limite d'âge.",
+    "expected_sources": []
+  },
+  {
+    "id": 5,
+    "category": "trap",
+    "question": "Une échelle portable peut-elle être utilisée sous la pluie ?",
+    "expected_behavior": "refuse",
+    "expected_answer": "Refus : les fiches sur les échelles ne traitent pas de la pluie (le mot n'apparaît que dans un exemple d'influences de l'environnement, hors sujet).",
+    "expected_sources": []
+  }
+]

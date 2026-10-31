@@ -222,3 +222,6 @@ __marimo__/
 # Source PDFs (third-party documents, not redistributed)
 data/raw/*
 !data/raw/.gitkeep
+
+# Working file for building the evaluation set
+eval/candidates.json

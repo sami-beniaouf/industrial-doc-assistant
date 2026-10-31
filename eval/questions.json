@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "category": "fact",
+    "question": "Quel niveau de protection minimum doivent avoir les gants sur une presse-plieuse ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Gants anti-coupure, facteur de protection minimum 3.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        5
+      ]
+    ]
+  },
+  {
+    "id": 2,
+    "category": "fact",
+    "question": "Quel écart maximal doit-il y avoir entre la pièce et le mors de l'étau sur une scie à métaux à ruban ?",
+    "expected_behavior": "answer",
+    "expected_answer": "6 mm au maximum lorsque la pièce n'est pas serrée.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        13
+      ]
+    ]
+  },
+  {
+    "id": 3,
+    "category": "fact",
+    "question": "Quelle distance de sécurité faut-il garder par rapport à la lame d'une scie à tronçonner quand on tient la pièce à la main ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Au minimum la distance d'un poing.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        16
+      ]
+    ]
+  },
+  {
+    "id": 4,
+    "category": "fact",
+    "question": "Quel filtre doit avoir le masque pour projeter du vernis ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Un masque avec filtre à charbon actif A2P2.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        50
+      ]
+    ]
+  },
+  {
+    "id": 5,
+    "category": "fact",
+    "question": "Que faut-il faire avant de serrer une meule sur une machine à meuler ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Effectuer un test de résonance.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        19
+      ]
+    ]
+  },
+  {
+    "id": 6,
+    "category": "fact",
+    "question": "Quelle précaution concerne les porteurs de stimulateur cardiaque près d'une machine d'électroérosion ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Contrôler et respecter les valeurs limites pour les opérateurs porteurs d'implants.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        54
+      ]
+    ]
+  },
+  {
+    "id": 7,
+    "category": "paraphrase",
+    "question": "Puis-je écouter de la musique avec des écouteurs au travail pour me protéger du bruit ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Les écouteurs non conformes à la norme EN 352 ne sont pas autorisés comme protection auditive.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        4
+      ]
+    ]
+  },
+  {
+    "id": 8,
+    "category": "paraphrase",
+    "question": "Mes lunettes de vue suffisent-elles pour protéger mes yeux à l'atelier ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Non : seules des lunettes de protection conformes à la norme EN 166 protègent suffisamment.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        4
+      ]
+    ]
+  },
+  {
+    "id": 9,
+    "category": "paraphrase",
+    "question": "Pourquoi ne faut-il pas porter de gants sur une perceuse ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Les gants peuvent être entraînés par l'outil ou la broche en rotation, ce qui augmente le risque d'accident.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        11
+      ],
+      [
+        "suva_travail_des_metaux.pdf",
+        4
+      ]
+    ]
+  },
+  {
+    "id": 10,
+    "category": "paraphrase",
+    "question": "Un apprenti de 17 ans peut-il utiliser une presse-plieuse ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Interdit aux moins de 18 ans, sauf dans le cadre de la formation professionnelle initiale.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        5
+      ]
+    ]
+  },
+  {
+    "id": 11,
+    "category": "paraphrase",
+    "question": "Comment éviter de se faire happer par une rouleuse ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Pas de gants (ou seulement ajustés), pas de vêtements amples, filet à cheveux, mains éloignées des cylindres.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        29
+      ]
+    ]
+  },
+  {
+    "id": 12,
+    "category": "standard",
+    "question": "Quelle norme européenne traite de la sécurité des perceuses ?",
+    "expected_behavior": "answer",
+    "expected_answer": "EN 12717.",
+    "expected_sources": [
+      [
+        "suva_machines_outils_normes.pdf",
+        2
+      ]
+    ]
+  },
+  {
+    "id": 13,
+    "category": "standard",
+    "question": "Quelle norme concerne les machines à scier les métaux à froid ?",
+    "expected_behavior": "answer",
+    "expected_answer": "EN ISO 16093.",
+    "expected_sources": [
+      [
+        "suva_machines_outils_normes.pdf",
+        2
+      ]
+    ]
+  },
+  {
+    "id": 14,
+    "category": "standard",
+    "question": "Quelles normes l'EN ISO 16090-1 remplacera-t-elle ?",
+    "expected_behavior": "answer",
+    "expected_answer": "EN 12417, EN 13128 et EN 14070.",
+    "expected_sources": [
+      [
+        "suva_machines_outils_normes.pdf",
+        2
+      ]
+    ]
+  },
+  {
+    "id": 15,
+    "category": "standard",
+    "question": "La norme EN ISO 16090-1 crée-t-elle une présomption de conformité ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Non : elle n'est pas publiée au Journal officiel de l'UE sous la directive machines.",
+    "expected_sources": [
+      [
+        "suva_machines_outils_normes.pdf",
+        2
+      ]
+    ]
+  },
+  {
+    "id": 16,
+    "category": "method",
+    "question": "Quelles sont les trois étapes de la méthode de réduction des risques ?",
+    "expected_behavior": "answer",
+    "expected_answer": "1. Prévention intrinsèque ; 2. Protecteurs, dispositifs de protection et mesures complémentaires ; 3. Informations pour l'utilisation.",
+    "expected_sources": [
+      [
+        "suva_appreciation_risques_machines.pdf",
+        43
+      ],
+      [
+        "suva_appreciation_risques_machines.pdf",
+        45
+      ],
+      [
+        "suva_appreciation_risques_machines.pdf",
+        46
+      ],
+      [
+        "suva_appreciation_risques_machines.pdf",
+        47
+      ]
+    ]
+  },
+  {
+    "id": 17,
+    "category": "method",
+    "question": "Combien de catégories de gravité du dommage la méthode Suva distingue-t-elle ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Cinq.",
+    "expected_sources": [
+      [
+        "suva_appreciation_risques_machines.pdf",
+        32
+      ]
+    ]
+  },
+  {
+    "id": 18,
+    "category": "method",
+    "question": "Quelle est la différence entre un protecteur et un dispositif de protection ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Le protecteur est une barrière physique ; le dispositif de protection n'en est pas une (l'accès reste possible).",
+    "expected_sources": [
+      [
+        "suva_appreciation_risques_machines.pdf",
+        46
+      ]
+    ]
+  },
+  {
+    "id": 19,
+    "category": "method",
+    "question": "Que garantit l'application d'une norme de type C ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Une présomption de conformité aux exigences essentielles qu'elle couvre.",
+    "expected_sources": [
+      [
+        "suva_appreciation_risques_machines.pdf",
+        10
+      ]
+    ]
+  },
+  {
+    "id": 20,
+    "category": "multi",
+    "question": "Sur quelles machines les gants sont-ils interdits ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Tour conventionnel, fraiseuse conventionnelle, perceuse à colonne ; en principe pas de gants sur les machines à outils rotatifs.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        7
+      ],
+      [
+        "suva_travail_des_metaux.pdf",
+        9
+      ],
+      [
+        "suva_travail_des_metaux.pdf",
+        11
+      ],
+      [
+        "suva_travail_des_metaux.pdf",
+        4
+      ]
+    ]
+  },
+  {
+    "id": 21,
+    "category": "multi",
+    "question": "Quels équipements de protection faut-il porter avec une meuleuse d'angle ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Protection oculaire, protecteurs d'ouïe, gants de protection, chaussures de sécurité (+ masque si nécessaire).",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        24
+      ],
+      [
+        "suva_travail_des_metaux.pdf",
+        2
+      ]
+    ]
+  },
+  {
+    "id": 22,
+    "category": "multi",
+    "question": "Faut-il porter des gants sur une rouleuse ?",
+    "expected_behavior": "answer",
+    "expected_answer": "Pas de gants, ou uniquement des modèles bien ajustés.",
+    "expected_sources": [
+      [
+        "suva_travail_des_metaux.pdf",
+        29
+      ]
+    ]
+  },
+  {
+    "id": 23,
+    "category": "trap",
+    "question": "Quels sont les dangers de nos propres équipements de travail ?",
+    "expected_behavior": "refuse",
+    "expected_answer": "Refus : la fiche « Propres équipements de travail » est un modèle vide (« xxx »).",
+    "expected_sources": []
+  },
+  {
+    "id": 24,
+    "category": "out_of_scope",
+    "question": "Quelle est la température de fusion de l'aluminium ?",
+    "expected_behavior": "refuse",
+    "expected_answer": "Refus : absent des documents.",
+    "expected_sources": []
+  },
+  {
+    "id": 25,
+    "category": "out_of_scope",
+    "question": "Quelle est la capacité de charge maximale d'un pont roulant ?",
+    "expected_behavior": "refuse",
+    "expected_answer": "Refus : les documents disent de ne pas surcharger, sans donner de valeur.",
+    "expected_sources": []
+  },
+  {
+    "id": 26,
+    "category": "out_of_scope",
+    "question": "Quelles sont les règles de sécurité pour une machine de découpe au jet d'eau ?",
+    "expected_behavior": "refuse",
+    "expected_answer": "Refus : machine absente des documents.",
+    "expected_sources": []
+  }
+]

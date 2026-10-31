@@ -3,7 +3,9 @@
 Run from the repository root:  streamlit run app/streamlit_app.py
 """
 import sys
+import time
 from pathlib import Path
+from uuid import uuid4
 
 import streamlit as st
 
@@ -14,6 +16,7 @@ st.set_page_config(page_title="Assistant sécurité et qualité en atelier")
 try:
     from docassistant.answer import NOT_FOUND, answer
     from docassistant.evaluation import is_refusal, parse_citations
+    from docassistant.query_log import log_event
     from docassistant.search import MODES
 except RuntimeError as error:  # a required environment variable is missing (see .env.example)
     st.error(f"Configuration manquante : {error}")
@@ -25,6 +28,14 @@ EXAMPLES = [
     "Faut-il porter des gants sur une fraiseuse conventionnelle ?",
     "Quelles sont les trois étapes de la méthode de réduction des risques ?",
 ]
+
+
+
+def save_feedback(query_id: str, key: str) -> None:
+    rating = st.session_state.get(key)  # st.feedback("thumbs"): 1 = up, 0 = down, None = cleared
+    if rating is not None:
+        log_event({"type": "feedback", "query_id": query_id, "rating": "up" if rating == 1 else "down"})
+
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -67,6 +78,8 @@ def render(message: dict) -> None:
                 st.markdown(label)
                 st.caption(p["content"][:500] + ("…" if len(p["content"]) > 500 else ""))
         st.caption(f"Mode : {message['mode']} · {message['tokens']} tokens")
+        key = f"feedback_{message['id']}"
+        st.feedback("thumbs", key=key, on_change=save_feedback, args=(message["id"], key))
 
 
 question = st.chat_input("Pose ta question sur la sécurité en atelier") or st.session_state.pop("pending", None)
@@ -79,18 +92,24 @@ if question:
     st.session_state.messages.append(user_message)
     render(user_message)
 
+    query_id = uuid4().hex[:8]
+    started = time.perf_counter()
     with st.spinner("Recherche dans les documents…"):
         try:
             result = answer(question, top=top, mode=mode)
         except Exception as error:  # network, quota, authentication...
+            log_event({"type": "error", "id": query_id, "question": question, "mode": mode, "error": type(error).__name__})
             st.error(f"L'appel à Azure a échoué ({type(error).__name__}). Détails dans le terminal.")
             raise
+    latency = time.perf_counter() - started
 
     cited = parse_citations(result.text)
+    refused = is_refusal(result.text, NOT_FOUND)
     assistant_message = {
+        "id": query_id,
         "role": "assistant",
         "text": result.text,
-        "refused": is_refusal(result.text, NOT_FOUND),
+        "refused": refused,
         "mode": mode,
         "tokens": result.total_tokens,
         "passages": [
@@ -98,5 +117,12 @@ if question:
             for p in result.passages
         ],
     }
+    log_event({
+        "type": "query", "id": query_id, "question": question, "mode": mode, "top": top,
+        "answer": result.text, "refused": refused,
+        "retrieved": [[p.source, p.page] for p in result.passages],
+        "cited": sorted([list(c) for c in cited]),
+        "tokens": result.total_tokens, "latency_s": round(latency, 2),
+    })
     st.session_state.messages.append(assistant_message)
     render(assistant_message)

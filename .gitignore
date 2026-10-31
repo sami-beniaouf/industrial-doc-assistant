@@ -225,3 +225,6 @@ data/raw/*
 
 # Working file for building the evaluation set
 eval/candidates.json
+
+# Query log (may contain user questions)
+logs/

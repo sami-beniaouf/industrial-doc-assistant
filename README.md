@@ -42,6 +42,8 @@ streamlit run app/streamlit_app.py
 
 The ingestion is idempotent: chunk IDs are deterministic, so re-running it updates documents instead of duplicating them. Secrets stay in `.env`, which is ignored by Git.
 
+The Streamlit interface writes a query log (`logs/queries.jsonl`, not versioned): question, answer, retrieved and cited pages, tokens, latency, and thumbs up/down feedback.
+
 ## Evaluation
 
 The assistant is evaluated on 26 French questions (22 with an answer in the documents, 4 that must be refused) and 5 extra yes/no questions kept aside. The questions were drafted with an AI assistant and selected by the author; each expected page was checked automatically against the PDF text. Generation is not deterministic, so generation figures are means over 3 runs. Answers are graded by the chat model itself, and every failure was then read by hand. Questions, raw results and notes are in [`eval/`](eval/).
@@ -109,7 +111,7 @@ This is a prototype. For a production system I would add:
 - A larger, independent evaluation set (about 100 questions from real users, validated by a domain expert), with a part never used for tuning, and a judge model different from the answering model.
 - Better retrieval: semantic reranking, chunking by section, filtering by machine, a larger number of passages for list questions.
 - Automatic checking that each statement is supported by the cited passage.
-- Keyless authentication (Entra ID and managed identity), request logging with cost and latency, and user feedback.
+- Keyless authentication (Entra ID and managed identity), and a retention policy and access control for the query log, which can contain personal data.
 - CI that runs linting, tests and the evaluation, and blocks a change that degrades the results.
 
 ## License

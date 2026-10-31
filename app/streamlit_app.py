@@ -37,6 +37,9 @@ def save_feedback(query_id: str, key: str) -> None:
         log_event({"type": "feedback", "query_id": query_id, "rating": "up" if rating == 1 else "down"})
 
 
+PREVIEW_CHARS = 200  # characters of each passage shown in the sources panel
+
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
@@ -72,14 +75,16 @@ def render(message: dict) -> None:
             st.info(message["text"])
         else:
             st.markdown(message["text"])
-        with st.expander(f"Sources ({len(message['passages'])} passages récupérés)"):
+        key = f"feedback_{message['id']}"
+        st.feedback("thumbs", key=key, on_change=save_feedback, args=(message["id"], key))
+        n = len(message["passages"])
+        title = f"Passages consultés ({n}), aucun ne répond à la question" if message["refused"] else f"Sources ({n} passages récupérés)"
+        with st.expander(title):
             for p in message["passages"]:
                 label = f"**{p['source']}**, page {p['page']}" + (" (citée dans la réponse)" if p["cited"] else "")
                 st.markdown(label)
-                st.caption(p["content"][:500] + ("…" if len(p["content"]) > 500 else ""))
+                st.caption(p["content"][:PREVIEW_CHARS] + ("…" if len(p["content"]) > PREVIEW_CHARS else ""))
         st.caption(f"Mode : {message['mode']} · {message['tokens']} tokens")
-        key = f"feedback_{message['id']}"
-        st.feedback("thumbs", key=key, on_change=save_feedback, args=(message["id"], key))
 
 
 question = st.chat_input("Pose ta question sur la sécurité en atelier") or st.session_state.pop("pending", None)

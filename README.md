@@ -14,6 +14,16 @@ PDF ──► extraction ──► chunking ──► embeddings ──► Azure
 question ──► embedding ──► hybrid search ──► top 5 chunks ──► chat model ──► answer + sources
 ```
 
+## Demo
+
+![Answer with citations](docs/screenshot-answer.png)
+
+*A question answered from the documents, with citations (document and page) and the retrieved passages listed under the answer.*
+
+![Refusal outside the documents](docs/screenshot-refusal.png)
+
+*A question outside the documents: the assistant refuses instead of answering from general knowledge.*
+
 ## Stack
 
 - Python, `pypdf`, `openai`, `azure-search-documents`

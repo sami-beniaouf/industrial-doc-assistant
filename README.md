@@ -4,7 +4,7 @@
 
 A retrieval-augmented generation (RAG) assistant for workshop safety. It answers questions in French using only a corpus of public Suva documents (machine-tool safety, metalworking) and cites its sources as document and page. If the documents do not contain the answer, it says so.
 
-> **Status:** work in progress. Ingestion, hybrid retrieval, answer generation with citations, an evaluation and a Streamlit interface and a CI workflow are done.
+> **Status:** functional prototype. Ingestion, hybrid retrieval, answer generation with citations, an evaluation, a Streamlit interface and a CI workflow are in place.
 
 ## Architecture
 

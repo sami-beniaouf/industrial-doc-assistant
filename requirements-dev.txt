@@ -1,0 +1,4 @@
+# Runtime dependencies plus the tools used by the tests and the CI.
+-r requirements.txt
+pytest==9.1.1
+ruff==0.17.2

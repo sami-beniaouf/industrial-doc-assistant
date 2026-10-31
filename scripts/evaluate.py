@@ -24,7 +24,15 @@ from docassistant.answer import NOT_FOUND, answer  # noqa: E402
 from docassistant.clients import openai_client  # noqa: E402
 from docassistant.config import settings  # noqa: E402
 from docassistant.evaluation import (  # noqa: E402
-    as_sources, first_rank, hit, is_refusal, judge_messages, parse_citations, parse_verdict, recall, summarize,
+    as_sources,
+    first_rank,
+    hit,
+    is_refusal,
+    judge_messages,
+    parse_citations,
+    parse_verdict,
+    recall,
+    summarize,
 )
 from docassistant.search import MODES, retrieve  # noqa: E402
 
@@ -41,10 +49,10 @@ QUESTIONS_FILE = ROOT / option("--questions", "eval/questions.json")
 RESULTS_FILE = ROOT / option("--out", "eval/results.json")
 
 
-def with_retry(fn, attempts: int = 5):
+def with_retry(fn, *args, attempts: int = 5, **kwargs):
     for attempt in range(attempts):
         try:
-            return fn()
+            return fn(*args, **kwargs)
         except RateLimitError:
             wait = 2 ** attempt
             print(f"  rate limit, retry in {wait} s")
@@ -54,9 +62,9 @@ def with_retry(fn, attempts: int = 5):
 
 def judge(question: str, expected: str, text: str) -> bool:
     response = with_retry(
-        lambda: openai_client().chat.completions.create(
-            model=settings.chat_deployment, messages=judge_messages(question, expected, text)
-        )
+        openai_client().chat.completions.create,
+        model=settings.chat_deployment,
+        messages=judge_messages(question, expected, text),
     )
     return parse_verdict(response.choices[0].message.content)
 
@@ -72,12 +80,12 @@ for q in questions:
 
     retrieved, texts, per_run = {}, [], []
     for run in range(RUNS):
-        result = with_retry(lambda: answer(q["question"], top=TOP, mode="hybrid"))
+        result = with_retry(answer, q["question"], top=TOP, mode="hybrid")
         passages = [(p.source, p.page) for p in result.passages]
         if run == 0:  # retrieval metrics come from the first run (the approximate vector search can vary slightly)
             retrieved["hybrid"] = passages
             for mode in ("keyword", "vector"):
-                retrieved[mode] = [(p.source, p.page) for p in with_retry(lambda: retrieve(q["question"], top=TOP, mode=mode))]
+                retrieved[mode] = [(p.source, p.page) for p in with_retry(retrieve, q["question"], top=TOP, mode=mode)]
         refused = is_refusal(result.text, NOT_FOUND)
         cited = parse_citations(result.text)
         correct = bool(answerable and not refused and judge(q["question"], q["expected_answer"], result.text))

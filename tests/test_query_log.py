@@ -1,9 +1,6 @@
 import json
-import sys
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from docassistant.query_log import log_event  # noqa: E402
+from docassistant.query_log import log_event
 
 
 def test_log_event_appends_valid_json_lines(tmp_path):

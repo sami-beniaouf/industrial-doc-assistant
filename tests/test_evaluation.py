@@ -1,9 +1,12 @@
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from docassistant.evaluation import (  # noqa: E402
-    as_sources, first_rank, hit, is_refusal, parse_citations, parse_verdict, recall, summarize,
+from docassistant.evaluation import (
+    as_sources,
+    first_rank,
+    hit,
+    is_refusal,
+    parse_citations,
+    parse_verdict,
+    recall,
+    summarize,
 )
 
 NOT_FOUND = "Je ne trouve pas cette information dans les documents."

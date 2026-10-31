@@ -1,8 +1,10 @@
 # industrial-doc-assistant
 
+[![CI](https://github.com/sami-beniaouf/industrial-doc-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/sami-beniaouf/industrial-doc-assistant/actions/workflows/ci.yml)
+
 A retrieval-augmented generation (RAG) assistant for workshop safety. It answers questions in French using only a corpus of public Suva documents (machine-tool safety, metalworking) and cites its sources as document and page. If the documents do not contain the answer, it says so.
 
-> **Status:** work in progress. Ingestion, hybrid retrieval, answer generation with citations, an evaluation and a Streamlit interface are done. CI is next.
+> **Status:** work in progress. Ingestion, hybrid retrieval, answer generation with citations, an evaluation and a Streamlit interface and a CI workflow are done.
 
 ## Architecture
 
@@ -54,6 +56,16 @@ The ingestion is idempotent: chunk IDs are deterministic, so re-running it updat
 
 The Streamlit interface writes a query log (`logs/queries.jsonl`, not versioned): question, answer, retrieved and cited pages, tokens, latency, and thumbs up/down feedback.
 
+### Checks
+
+The same checks run in the CI, without any Azure access:
+
+```powershell
+pip install -r requirements-dev.txt
+ruff check src tests scripts app
+pytest
+```
+
 ## Evaluation
 
 The assistant is evaluated on 26 French questions (22 with an answer in the documents, 4 that must be refused) and 5 extra yes/no questions kept aside. The questions were drafted with an AI assistant and selected by the author; each expected page was checked automatically against the PDF text. Generation is not deterministic, so generation figures are means over 3 runs. Answers are graded by the chat model itself, and every failure was then read by hand. Questions, raw results and notes are in [`eval/`](eval/).
@@ -93,7 +105,8 @@ Reading the failures by hand, the real score is closer to 20–21 / 22.
 src/docassistant/   configuration, Azure clients, ingestion, search, answer generation, evaluation logic
 scripts/            entry points (ingestion, ask, evaluate, connection checks)
 app/                Streamlit interface
-tests/              unit tests for the evaluation logic
+tests/              unit tests (chunking, chunk IDs, evaluation logic, query log)
+.github/workflows/  CI: ruff and pytest
 data/raw/           source PDFs (not versioned)
 eval/               questions, results and notes
 ```
@@ -105,7 +118,7 @@ eval/               questions, results and notes
 - [x] Hybrid retrieval and answer generation with citations
 - [x] Evaluation (31 questions, repeated runs)
 - [x] Streamlit interface
-- [ ] CI (ruff, pytest)
+- [x] CI (ruff, pytest)
 
 ## Limitations
 
@@ -122,7 +135,7 @@ This is a prototype. For a production system I would add:
 - Better retrieval: semantic reranking, chunking by section, filtering by machine, a larger number of passages for list questions.
 - Automatic checking that each statement is supported by the cited passage.
 - Keyless authentication (Entra ID and managed identity), and a retention policy and access control for the query log, which can contain personal data.
-- CI that runs linting, tests and the evaluation, and blocks a change that degrades the results.
+- CI that also runs the evaluation on each change and blocks a change that degrades the results (today it runs linting and tests only).
 
 ## License
 

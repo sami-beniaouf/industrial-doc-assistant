@@ -36,5 +36,5 @@ def cosine(a: np.ndarray, b: np.ndarray) -> float:
     return float(a @ b / (np.linalg.norm(a) * np.linalg.norm(b)))
 
 
-for passage, vector in zip(passages, vectors[1:]):
+for passage, vector in zip(passages, vectors[1:], strict=True):
     print(f"{cosine(vectors[0], vector):.3f}  {passage}")

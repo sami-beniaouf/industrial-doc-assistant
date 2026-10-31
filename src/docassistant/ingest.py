@@ -48,13 +48,18 @@ class Chunk:
     content: str
 
 
+def clean_text(text: str) -> str:
+    """Collapse whitespace and rejoin words split at the end of a line ("Machines- outils")."""
+    text = " ".join(text.split())
+    return re.sub(r"(?<=\w)- (?=[a-zà-ÿ])", "-", text)
+
+
 def read_pdf(path: Path) -> list[tuple[int, str]]:
     """Return (page number, text) for each page that contains text."""
     reader = PdfReader(path)
     pages = []
     for number, page in enumerate(reader.pages, start=1):
-        text = " ".join((page.extract_text() or "").split())
-        text = re.sub(r"(?<=\w)- (?=[a-zà-ÿ])", "-", text)  # rejoin line-break hyphens: "Machines- outils" -> "Machines-outils"
+        text = clean_text(page.extract_text() or "")
         if text:
             pages.append((number, text))
     return pages
@@ -142,7 +147,7 @@ def upload(chunks: list[Chunk], vectors: list[list[float]]) -> None:
             "chunk": c.chunk,
             "content_vector": v,
         }
-        for c, v in zip(chunks, vectors)
+        for c, v in zip(chunks, vectors, strict=True)
     ]
     client = search_client()
     for start in range(0, len(documents), 100):

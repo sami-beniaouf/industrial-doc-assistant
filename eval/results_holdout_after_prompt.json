@@ -1,0 +1,667 @@
+{
+  "run_at": "2026-10-31T13:16:07+00:00",
+  "chat_deployment": "chat",
+  "embedding_deployment": "embedding",
+  "top": 5,
+  "runs": 3,
+  "summaries": [
+    {
+      "n_answerable": 3,
+      "n_refusals": 2,
+      "retrieval_hit": {
+        "hybrid": 3,
+        "keyword": 3,
+        "vector": 3
+      },
+      "retrieval_hit_at_1": {
+        "hybrid": 3,
+        "keyword": 3,
+        "vector": 3
+      },
+      "retrieval_mrr": {
+        "hybrid": 1.0,
+        "keyword": 1.0,
+        "vector": 1.0
+      },
+      "retrieval_recall": {
+        "hybrid": 1.0,
+        "keyword": 1.0,
+        "vector": 1.0
+      },
+      "retrieval_hit_by_category": {
+        "closed": {
+          "n": 3,
+          "hybrid": 3,
+          "keyword": 3,
+          "vector": 3
+        }
+      },
+      "correct": 3,
+      "false_refusals": 0,
+      "cited_expected": 3,
+      "correct_refusals": 2,
+      "invalid_citations": 0
+    },
+    {
+      "n_answerable": 3,
+      "n_refusals": 2,
+      "retrieval_hit": {
+        "hybrid": 3,
+        "keyword": 3,
+        "vector": 3
+      },
+      "retrieval_hit_at_1": {
+        "hybrid": 3,
+        "keyword": 3,
+        "vector": 3
+      },
+      "retrieval_mrr": {
+        "hybrid": 1.0,
+        "keyword": 1.0,
+        "vector": 1.0
+      },
+      "retrieval_recall": {
+        "hybrid": 1.0,
+        "keyword": 1.0,
+        "vector": 1.0
+      },
+      "retrieval_hit_by_category": {
+        "closed": {
+          "n": 3,
+          "hybrid": 3,
+          "keyword": 3,
+          "vector": 3
+        }
+      },
+      "correct": 3,
+      "false_refusals": 0,
+      "cited_expected": 3,
+      "correct_refusals": 2,
+      "invalid_citations": 0
+    },
+    {
+      "n_answerable": 3,
+      "n_refusals": 2,
+      "retrieval_hit": {
+        "hybrid": 3,
+        "keyword": 3,
+        "vector": 3
+      },
+      "retrieval_hit_at_1": {
+        "hybrid": 3,
+        "keyword": 3,
+        "vector": 3
+      },
+      "retrieval_mrr": {
+        "hybrid": 1.0,
+        "keyword": 1.0,
+        "vector": 1.0
+      },
+      "retrieval_recall": {
+        "hybrid": 1.0,
+        "keyword": 1.0,
+        "vector": 1.0
+      },
+      "retrieval_hit_by_category": {
+        "closed": {
+          "n": 3,
+          "hybrid": 3,
+          "keyword": 3,
+          "vector": 3
+        }
+      },
+      "correct": 2,
+      "false_refusals": 0,
+      "cited_expected": 3,
+      "correct_refusals": 2,
+      "invalid_citations": 0
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "category": "closed",
+      "question": "Faut-il porter des gants de protection sur une cisaille guillotine ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Oui, des gants de protection contre les coupures (au moins le niveau 3).",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          26
+        ]
+      ],
+      "answers": [
+        "Oui, pour la cisaille guillotine il est indiqué « Porter des gants de protection contre les coupures (au moins le niveau 3 de protection) » [suva_travail_des_metaux.pdf, p. 26]. Le tableau des EPI mentionne aussi « Cisaille guillotine — Gants anti-coupure » [suva_travail_des_metaux.pdf, p. 2].",
+        "Oui, il faut porter des gants de protection contre les coupures sur une cisaille guillotine [suva_travail_des_metaux.pdf, p. 26].  \nLes règles de sécurité pour les cisailles guillotines indiquent aussi « Porter des gants de protection contre les coupures (au moins le niveau 3 de protection) » [suva_travail_des_metaux.pdf, p. 26].",
+        "Oui, il faut porter des gants de protection contre les coupures sur une cisaille guillotine [suva_travail_des_metaux.pdf, p. 26]."
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": false,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            26
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            27
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            9
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            26
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            18
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            26
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            9
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            27
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 2,
+      "category": "closed",
+      "question": "Peut-on utiliser une tronçonneuse au-dessus du niveau des épaules ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Non, il ne faut jamais l'utiliser au-dessus du niveau des épaules.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          17
+        ]
+      ],
+      "answers": [
+        "Non. « Ne jamais utiliser la tronçonneuse au-dessus du niveau des épaules. » [suva_travail_des_metaux.pdf, p. 17]",
+        "Non, « Ne jamais utiliser la tronçonneuse au-dessus du niveau des épaules. » [suva_travail_des_metaux.pdf, p. 17]",
+        "Non, il est indiqué de « Ne jamais utiliser la tronçonneuse au-dessus du niveau des épaules. » [suva_travail_des_metaux.pdf, p. 17]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            17
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            18
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            11
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            26
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            17
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            5
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            11
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            18
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            17
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            18
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            16
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            26
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            11
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 3,
+      "category": "closed",
+      "question": "Un jeune de 16 ans peut-il utiliser un pont roulant ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Non : l'utilisation est interdite aux jeunes de moins de 18 ans, sauf dans le cadre de la formation professionnelle initiale.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          46
+        ]
+      ],
+      "answers": [
+        "Non. L’utilisation du pont roulant est interdite aux jeunes travailleurs de moins de 18 ans, avec une exception pour la formation professionnelle initiale. [suva_travail_des_metaux.pdf, p. 46]",
+        "Non, l’utilisation est interdite aux jeunes travailleurs de moins de 18 ans, sauf exception pour la formation professionnelle initiale. [suva_travail_des_metaux.pdf, p. 46]",
+        "Non, l’utilisation est interdite aux jeunes travailleurs de moins de 18 ans (exception : formation professionnelle initiale). [suva_travail_des_metaux.pdf, p. 46]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            46
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            42
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            40
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            29
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            46
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            3
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            42
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            49
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            46
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            40
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            42
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            43
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            39
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 4,
+      "category": "trap",
+      "question": "Le soudage est-il interdit aux personnes de moins de 18 ans ?",
+      "expected_behavior": "refuse",
+      "expected_answer": "Refus : la fiche soudage (p.36-37) ne mentionne aucune limite d'âge.",
+      "expected_sources": [],
+      "answers": [
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents."
+      ],
+      "per_run": [
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            31
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            29
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            27
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            26
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            27
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            31
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            42
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            17
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            36
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            13
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            15
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": null,
+        "keyword": null,
+        "vector": null
+      }
+    },
+    {
+      "id": 5,
+      "category": "trap",
+      "question": "Une échelle portable peut-elle être utilisée sous la pluie ?",
+      "expected_behavior": "refuse",
+      "expected_answer": "Refus : les fiches sur les échelles ne traitent pas de la pluie (le mot n'apparaît que dans un exemple d'influences de l'environnement, hors sujet).",
+      "expected_sources": [],
+      "answers": [
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents."
+      ],
+      "per_run": [
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            39
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            38
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            38
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            3
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            52
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            38
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            39
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            38
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            52
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            72
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            39
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            38
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            40
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            3
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            73
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": null,
+        "keyword": null,
+        "vector": null
+      }
+    }
+  ]
+}

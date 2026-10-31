@@ -1,0 +1,3092 @@
+{
+  "run_at": "2026-10-31T13:25:36+00:00",
+  "chat_deployment": "chat",
+  "embedding_deployment": "embedding",
+  "top": 5,
+  "runs": 3,
+  "summaries": [
+    {
+      "n_answerable": 22,
+      "n_refusals": 4,
+      "retrieval_hit": {
+        "hybrid": 22,
+        "keyword": 21,
+        "vector": 21
+      },
+      "retrieval_hit_at_1": {
+        "hybrid": 21,
+        "keyword": 19,
+        "vector": 17
+      },
+      "retrieval_mrr": {
+        "hybrid": 0.9659090909090909,
+        "keyword": 0.9015151515151515,
+        "vector": 0.8522727272727273
+      },
+      "retrieval_recall": {
+        "hybrid": 0.9659090909090909,
+        "keyword": 0.9090909090909091,
+        "vector": 0.8977272727272727
+      },
+      "retrieval_hit_by_category": {
+        "fact": {
+          "n": 6,
+          "hybrid": 6,
+          "keyword": 6,
+          "vector": 6
+        },
+        "method": {
+          "n": 4,
+          "hybrid": 4,
+          "keyword": 4,
+          "vector": 3
+        },
+        "multi": {
+          "n": 3,
+          "hybrid": 3,
+          "keyword": 2,
+          "vector": 3
+        },
+        "paraphrase": {
+          "n": 5,
+          "hybrid": 5,
+          "keyword": 5,
+          "vector": 5
+        },
+        "standard": {
+          "n": 4,
+          "hybrid": 4,
+          "keyword": 4,
+          "vector": 4
+        }
+      },
+      "correct": 19,
+      "false_refusals": 0,
+      "cited_expected": 21,
+      "correct_refusals": 4,
+      "invalid_citations": 0
+    },
+    {
+      "n_answerable": 22,
+      "n_refusals": 4,
+      "retrieval_hit": {
+        "hybrid": 22,
+        "keyword": 21,
+        "vector": 21
+      },
+      "retrieval_hit_at_1": {
+        "hybrid": 21,
+        "keyword": 19,
+        "vector": 17
+      },
+      "retrieval_mrr": {
+        "hybrid": 0.9659090909090909,
+        "keyword": 0.9015151515151515,
+        "vector": 0.8522727272727273
+      },
+      "retrieval_recall": {
+        "hybrid": 0.9659090909090909,
+        "keyword": 0.9090909090909091,
+        "vector": 0.8977272727272727
+      },
+      "retrieval_hit_by_category": {
+        "fact": {
+          "n": 6,
+          "hybrid": 6,
+          "keyword": 6,
+          "vector": 6
+        },
+        "method": {
+          "n": 4,
+          "hybrid": 4,
+          "keyword": 4,
+          "vector": 3
+        },
+        "multi": {
+          "n": 3,
+          "hybrid": 3,
+          "keyword": 2,
+          "vector": 3
+        },
+        "paraphrase": {
+          "n": 5,
+          "hybrid": 5,
+          "keyword": 5,
+          "vector": 5
+        },
+        "standard": {
+          "n": 4,
+          "hybrid": 4,
+          "keyword": 4,
+          "vector": 4
+        }
+      },
+      "correct": 20,
+      "false_refusals": 0,
+      "cited_expected": 22,
+      "correct_refusals": 4,
+      "invalid_citations": 1
+    },
+    {
+      "n_answerable": 22,
+      "n_refusals": 4,
+      "retrieval_hit": {
+        "hybrid": 22,
+        "keyword": 21,
+        "vector": 21
+      },
+      "retrieval_hit_at_1": {
+        "hybrid": 21,
+        "keyword": 19,
+        "vector": 17
+      },
+      "retrieval_mrr": {
+        "hybrid": 0.9659090909090909,
+        "keyword": 0.9015151515151515,
+        "vector": 0.8522727272727273
+      },
+      "retrieval_recall": {
+        "hybrid": 0.9659090909090909,
+        "keyword": 0.9090909090909091,
+        "vector": 0.8977272727272727
+      },
+      "retrieval_hit_by_category": {
+        "fact": {
+          "n": 6,
+          "hybrid": 6,
+          "keyword": 6,
+          "vector": 6
+        },
+        "method": {
+          "n": 4,
+          "hybrid": 4,
+          "keyword": 4,
+          "vector": 3
+        },
+        "multi": {
+          "n": 3,
+          "hybrid": 3,
+          "keyword": 2,
+          "vector": 3
+        },
+        "paraphrase": {
+          "n": 5,
+          "hybrid": 5,
+          "keyword": 5,
+          "vector": 5
+        },
+        "standard": {
+          "n": 4,
+          "hybrid": 4,
+          "keyword": 4,
+          "vector": 4
+        }
+      },
+      "correct": 20,
+      "false_refusals": 0,
+      "cited_expected": 22,
+      "correct_refusals": 4,
+      "invalid_citations": 0
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "category": "fact",
+      "question": "Quel niveau de protection minimum doivent avoir les gants sur une presse-plieuse ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Gants anti-coupure, facteur de protection minimum 3.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          5
+        ]
+      ],
+      "answers": [
+        "Les gants doivent ունենալ un facteur de protection minimum de 3. [suva_travail_des_metaux.pdf, p. 5]",
+        "Le niveau de protection minimum des gants sur une presse-plieuse est « min. 3 » pour les gants de protection contre les coupures. [suva_travail_des_metaux.pdf, p. 5]",
+        "Les gants de protection pour une presse-plieuse doivent avoir un facteur de protection minimum de 3. [suva_travail_des_metaux.pdf, p. 5]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": false,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            5
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            31
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            33
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            5
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            31
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            21
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            31
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            5
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            33
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 2
+      }
+    },
+    {
+      "id": 2,
+      "category": "fact",
+      "question": "Quel écart maximal doit-il y avoir entre la pièce et le mors de l'étau sur une scie à métaux à ruban ?",
+      "expected_behavior": "answer",
+      "expected_answer": "6 mm au maximum lorsque la pièce n'est pas serrée.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          13
+        ]
+      ],
+      "answers": [
+        "L’espace entre la pièce et le mors de l’étau doit être au maximum de 6 mm lorsque la pièce n’est pas serrée [suva_travail_des_metaux.pdf, p. 13].",
+        "Sur une scie à métaux à ruban, l’espace entre la pièce et le mors de l’étau doit être au maximum de 6 mm lorsque la pièce n’est pas serrée. [suva_travail_des_metaux.pdf, p. 13]",
+        "L’espace entre la pièce et le mors de l’étau doit être au maximum de 6 mm lorsque la pièce n’est pas serrée. [suva_travail_des_metaux.pdf, p. 13]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            13
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            15
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            23
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            16
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            13
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            15
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            27
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            13
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            15
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            16
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            23
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            64
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 3,
+      "category": "fact",
+      "question": "Quelle distance de sécurité faut-il garder par rapport à la lame d'une scie à tronçonner quand on tient la pièce à la main ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Au minimum la distance d'un poing.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          16
+        ]
+      ],
+      "answers": [
+        "Si la pièce est maintenue à la main, nous respectons une distance de sécurité minimale d’un poing par rapport à la lame. [suva_travail_des_metaux.pdf, p. 16]",
+        "Si la pièce est maintenue à la main, nous respectons une distance de sécurité minimale d’un poing par rapport à la lame. [suva_travail_des_metaux.pdf, p. 16]",
+        "Oui, il faut respecter une distance de sécurité minimale d’un poing par rapport à la lame lorsque la pièce est maintenue à la main. [suva_travail_des_metaux.pdf, p. 16]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            16
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            61
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            17
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            60
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            27
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            16
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            60
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            61
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            17
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            27
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            16
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            15
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            13
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            11
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            61
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 4,
+      "category": "fact",
+      "question": "Quel filtre doit avoir le masque pour projeter du vernis ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Un masque avec filtre à charbon actif A2P2.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          50
+        ]
+      ],
+      "answers": [
+        "Le masque doit être équipé d’un filtre à charbon actif (A2P2) lors de projection de vernis contenant des solvants. [suva_travail_des_metaux.pdf, p. 50]",
+        "Le masque doit être équipé d’un filtre à charbon actif (A2P2) lors de projection de vernis contenant des solvants. [suva_travail_des_metaux.pdf, p. 50]",
+        "Porter un masque équipé d’un filtre à charbon actif (A2P2) lors de projection de vernis contenant des solvants. [suva_travail_des_metaux.pdf, p. 50]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            50
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            50
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            24
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            36
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            50
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            50
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            36
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            24
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            50
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            21
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            50
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            22
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 5,
+      "category": "fact",
+      "question": "Que faut-il faire avant de serrer une meule sur une machine à meuler ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Effectuer un test de résonance.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          19
+        ]
+      ],
+      "answers": [
+        "Avant de serrer une meule sur une machine à meuler, il faut effectuer un test de résonance. [suva_machine_a_meuler.pdf, p. 1]",
+        "Il faut effectuer un test de résonance avant le serrage de la meule. [suva_travail_des_metaux.pdf, p. 19]",
+        "Effectuer un test de résonance avant le serrage de la meule. [suva_travail_des_metaux.pdf, p. 19]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            19
+          ],
+          [
+            "suva_machine_a_meuler.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            22
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            9
+          ],
+          [
+            "suva_fraiseuse_conventionnelle.pdf",
+            1
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            19
+          ],
+          [
+            "suva_machine_a_meuler.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            22
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            50
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            19
+          ],
+          [
+            "suva_machine_a_meuler.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            22
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            24
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            8
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 6,
+      "category": "fact",
+      "question": "Quelle précaution concerne les porteurs de stimulateur cardiaque près d'une machine d'électroérosion ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Contrôler et respecter les valeurs limites pour les opérateurs porteurs d'implants.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          54
+        ]
+      ],
+      "answers": [
+        "Ils doivent voir leurs valeurs limites contrôlées et respectées : « Contrôler et respecter les valeurs limites nécessaires pour les opérateurs porteurs d'implants (p. ex. stimulateur cardiaque) » [suva_travail_des_metaux.pdf, p. 54]",
+        "Contrôler et respecter les valeurs limites nécessaires pour les opérateurs porteurs d'implants (p. ex. stimulateur cardiaque). [suva_travail_des_metaux.pdf, p. 54]",
+        "Contrôler et respecter les valeurs limites nécessaires pour les opérateurs porteurs d'implants (p. ex. stimulateur cardiaque) [suva_travail_des_metaux.pdf, p. 54]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            54
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            55
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            55
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            56
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            52
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            54
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            55
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            52
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            60
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            61
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            54
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            55
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            55
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            36
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            11
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 7,
+      "category": "paraphrase",
+      "question": "Puis-je écouter de la musique avec des écouteurs au travail pour me protéger du bruit ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Les écouteurs non conformes à la norme EN 352 ne sont pas autorisés comme protection auditive.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          4
+        ]
+      ],
+      "answers": [
+        "Non, « Les écouteurs ne répondant pas à la norme EN352 ne sont pas autorisés comme protection auditive. » [suva_travail_des_metaux.pdf, p. 4]",
+        "Non, « Les écouteurs ne répondant pas à la norme EN352 ne sont pas autorisés comme protection auditive. » [suva_travail_des_metaux.pdf, p. 4]",
+        "Non, « Les écouteurs ne répondant pas à la norme EN352 ne sont pas autorisés comme protection auditive. » [suva_travail_des_metaux.pdf, p. 4]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            24
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            67
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            33
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            33
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            67
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            24
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            50
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 8,
+      "category": "paraphrase",
+      "question": "Mes lunettes de vue suffisent-elles pour protéger mes yeux à l'atelier ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Non : seules des lunettes de protection conformes à la norme EN 166 protègent suffisamment.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          4
+        ]
+      ],
+      "answers": [
+        "Non [suva_travail_des_metaux.pdf, p. 4] Les lunettes de vue disponibles dans le commerce ne sont pas considérées comme des lunettes de protection. Les yeux ne sont suffisamment protégés que si les lunettes de protection répondent aux exigences de la norme EN 166 [suva_travail_des_metaux.pdf, p. 4].",
+        "Non, les lunettes de vue disponibles dans le commerce ne sont pas considérées comme des lunettes de protection, et les yeux ne sont suffisamment protégés que si les lunettes de protection répondent aux exigences de la norme EN 166. [suva_travail_des_metaux.pdf, p. 4]",
+        "Non [suva_travail_des_metaux.pdf, p. 4] Les lunettes de vue disponibles dans le commerce ne sont pas considérées comme des lunettes de protection. Les yeux ne sont suffisamment protégés que si les lunettes de protection répondent aux exigences de la norme EN 166. [suva_travail_des_metaux.pdf, p. 4]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            50
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            50
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            16
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            36
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            3
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 9,
+      "category": "paraphrase",
+      "question": "Pourquoi ne faut-il pas porter de gants sur une perceuse ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Les gants peuvent être entraînés par l'outil ou la broche en rotation, ce qui augmente le risque d'accident.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          11
+        ],
+        [
+          "suva_travail_des_metaux.pdf",
+          4
+        ]
+      ],
+      "answers": [
+        "Le port de gants sur une perceuse à colonne est interdit, car il y a un « risque que des gants [...] soient entraînés par l’outil ou par la broche en rotation » [suva_travail_des_metaux.pdf, p. 11]. Le document précise aussi : « Interdiction de porter des gants » [suva_travail_des_metaux.pdf, p. 11].",
+        "Oui, sur une perceuse à colonne, le port de gants est interdit parce qu’il existe un « risque que des gants […] soient entraînés par l’outil ou par la broche en rotation » et qu’il est indiqué : « Interdiction de porter des gants ». [suva_travail_des_metaux.pdf, p. 11]",
+        "Le port de gants de protection lors de travaux sur des machines avec des pièces en rotation augmente le risque d’accident et n’est donc pas autorisé. [suva_travail_des_metaux.pdf, p. 4]  \nSur la perceuse à colonne, il y a aussi un risque que des gants soient entraînés par l’outil ou par la broche en rotation. [suva_travail_des_metaux.pdf, p. 11]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            11
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            9
+          ],
+          [
+            "suva_fraiseuse_conventionnelle.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            19
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            11
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            27
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            18
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            11
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            11
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            19
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            21
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 10,
+      "category": "paraphrase",
+      "question": "Un apprenti de 17 ans peut-il utiliser une presse-plieuse ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Interdit aux moins de 18 ans, sauf dans le cadre de la formation professionnelle initiale.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          5
+        ]
+      ],
+      "answers": [
+        "Non. L'utilisation est interdite aux jeunes travailleurs de moins de 18 ans, avec exception seulement pour la formation professionnelle initiale. [suva_travail_des_metaux.pdf, p. 5]",
+        "Non, l’utilisation de la presse-plieuse est interdite aux jeunes travailleurs de moins de 18 ans, sauf exception pour la formation professionnelle initiale. [suva_travail_des_metaux.pdf, p. 5]",
+        "Non, « l'utilisation est interdite aux jeunes travailleurs de moins de 18 ans (exception : formation professionnelle initiale) » pour la presse-plieuse. [suva_travail_des_metaux.pdf, p. 5]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            5
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            31
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            6
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            5
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            31
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            21
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            5
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            31
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            32
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            6
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 11,
+      "category": "paraphrase",
+      "question": "Comment éviter de se faire happer par une rouleuse ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Pas de gants (ou seulement ajustés), pas de vêtements amples, filet à cheveux, mains éloignées des cylindres.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          29
+        ]
+      ],
+      "answers": [
+        "Pour éviter de se faire happer par une rouleuse, il faut notamment ne pas porter de vêtements amples, en particulier au niveau des manches, ni de veste ouverte, porter un filet à cheveux si l’on a les cheveux longs, ne pas porter de gants ou uniquement des modèles bien ajustés, et ne pas approcher les mains à proximité des cylindres lors de l’introduction des tôles. [suva_travail_des_metaux.pdf, p. 29]",
+        "Ne pas approcher les mains à proximité des cylindres lors de l’introduction des tôles. [suva_travail_des_metaux.pdf, p. 29]  \nNe pas porter de vêtements amples, en particulier au niveau des manches, ni de veste ouverte. [suva_travail_des_metaux.pdf, p. 29]  \nCheveux longs : porter un filet à cheveux. [suva_travail_des_metaux.pdf, p. 29]  \nNe pas porter de gants, ou uniquement des modèles bien ajustés. [suva_travail_des_metaux.pdf, p. 29]",
+        "Ne pas approcher les mains à proximité des cylindres lors de l’introduction des tôles. [suva_travail_des_metaux.pdf, p. 29]  \nNe pas porter de vêtements amples, en particulier au niveau des manches, ni de veste ouverte. [suva_travail_des_metaux.pdf, p. 29]  \nCheveux longs : porter un filet à cheveux. [suva_travail_des_metaux.pdf, p. 29]  \nNe pas porter de gants, ou uniquement des modèles bien ajustés. [suva_travail_des_metaux.pdf, p. 29]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            29
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            46
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            9
+          ],
+          [
+            "suva_fraiseuse_conventionnelle.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            39
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            29
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            11
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            27
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            62
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            29
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            9
+          ],
+          [
+            "suva_fraiseuse_conventionnelle.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            24
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            19
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 12,
+      "category": "standard",
+      "question": "Quelle norme européenne traite de la sécurité des perceuses ?",
+      "expected_behavior": "answer",
+      "expected_answer": "EN 12717.",
+      "expected_sources": [
+        [
+          "suva_machines_outils_normes.pdf",
+          2
+        ]
+      ],
+      "answers": [
+        "La norme européenne qui traite de la sécurité des perceuses est EN 12717, intitulée « Sécurité des machines-outils – Perceuses ». [suva_machines_outils_normes.pdf, p. 2]",
+        "La norme européenne qui traite de la sécurité des perceuses est EN 12717 « Sécurité des machines-outils – Perceuses ». [suva_machines_outils_normes.pdf, p. 2]",
+        "La norme européenne qui traite de la sécurité des perceuses est **EN 12717 Sécurité des machines-outils – Perceuses** [suva_machines_outils_normes.pdf, p. 2]. Elle fixe les exigences techniques de sécurité et les mesures de protection à prendre lors de la conception, de la construction et de la livraison des perceuses fixes [suva_machines_outils_normes.pdf, p. 2]."
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            10
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            11
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            6
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            43
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            11
+          ]
+        ],
+        "vector": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            1
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            59
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 13,
+      "category": "standard",
+      "question": "Quelle norme concerne les machines à scier les métaux à froid ?",
+      "expected_behavior": "answer",
+      "expected_answer": "EN ISO 16093.",
+      "expected_sources": [
+        [
+          "suva_machines_outils_normes.pdf",
+          2
+        ]
+      ],
+      "answers": [
+        "La norme concernée est **EN ISO 16093** pour les « Machines-outils – Sécurité – Machines à scier les métaux à froid » [suva_machines_outils_normes.pdf, p. 2].",
+        "La norme qui concerne les machines à scier les métaux à froid est EN ISO 16093 « Machines-outils – Sécurité – Machines à scier les métaux à froid » [suva_machines_outils_normes.pdf, p. 2].",
+        "La norme concernée est EN ISO 16093, intitulée « Machines-outils – Sécurité – Machines à scier les métaux à froid » [suva_machines_outils_normes.pdf, p. 2]."
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            23
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            4
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            23
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ]
+        ],
+        "vector": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            1
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 14,
+      "category": "standard",
+      "question": "Quelles normes l'EN ISO 16090-1 remplacera-t-elle ?",
+      "expected_behavior": "answer",
+      "expected_answer": "EN 12417, EN 13128 et EN 14070.",
+      "expected_sources": [
+        [
+          "suva_machines_outils_normes.pdf",
+          2
+        ]
+      ],
+      "answers": [
+        "L’EN ISO 16090-1 remplacera dans un proche avenir les normes EN 12417 « Machines-outils – Sécurité – Centres d’usinage », EN 13128 « Sécurité des machines-outils – Fraiseuses (comprenant les aléseuses) » et EN 14070 « Sécurité des machines-outils – Machines transfert et machines spéciales ». [suva_machines_outils_normes.pdf, p. 2]",
+        "L’EN ISO 16090–1 remplacera les normes suivantes : EN 12417 « Machines-outils – Sécurité – Centres d’usinage », EN 13128 « Sécurité des machines-outils – Fraiseuses (comprenant les aléseuses) » et EN 14070 « Sécurité des machines-outils – Machines transfert et machines spéciales ». [suva_machines_outils_normes.pdf, p. 2]",
+        "L’EN ISO 16090-1 remplacera, dans un proche avenir, les normes suivantes ayant présomption de conformité encore publiées au Journal officiel de l’Union européenne sous la directive relative aux machines 2006/42/CE : EN 12417 « Machines-outils – Sécurité – Centres d’usinage », EN 13128 « Sécurité des machines-outils – Fraiseuses (comprenant les aléseuses) » et EN 14070 « Sécurité des machines-outils – Machines transfert et machines spéciales ». [suva_machines_outils_normes.pdf, p. 2]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            50
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            52
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            64
+          ]
+        ],
+        "vector": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            67
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            30
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            75
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 15,
+      "category": "standard",
+      "question": "La norme EN ISO 16090-1 crée-t-elle une présomption de conformité ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Non : elle n'est pas publiée au Journal officiel de l'UE sous la directive machines.",
+      "expected_sources": [
+        [
+          "suva_machines_outils_normes.pdf",
+          2
+        ]
+      ],
+      "answers": [
+        "Non, la norme EN ISO 16090–1 « n’est pas publiée au Journal officiel de l’Union européenne sous la directive relative aux machines 2006/42/CE et ne crée pas une présomption de conformité ». [suva_machines_outils_normes.pdf, p. 2]",
+        "Non, « la norme EN ISO 16090–1 n’est pas publiée au Journal officiel de l’Union européenne sous la directive relative aux machines 2006/42/CE et ne crée pas une présomption de conformité ». [suva_machines_outils_normes.pdf, p. 2]",
+        "Non, « la norme EN ISO 16090–1 n’est pas publiée au Journal officiel de l’Union européenne sous la directive relative aux machines 2006/42/CE et ne crée pas une présomption de conformité ». [suva_machines_outils_normes.pdf, p. 2]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            10
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            10
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            43
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            43
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            19
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            10
+          ]
+        ],
+        "vector": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            10
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            43
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            75
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            30
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 4
+      }
+    },
+    {
+      "id": 16,
+      "category": "method",
+      "question": "Quelles sont les trois étapes de la méthode de réduction des risques ?",
+      "expected_behavior": "answer",
+      "expected_answer": "1. Prévention intrinsèque ; 2. Protecteurs, dispositifs de protection et mesures complémentaires ; 3. Informations pour l'utilisation.",
+      "expected_sources": [
+        [
+          "suva_appreciation_risques_machines.pdf",
+          43
+        ],
+        [
+          "suva_appreciation_risques_machines.pdf",
+          45
+        ],
+        [
+          "suva_appreciation_risques_machines.pdf",
+          46
+        ],
+        [
+          "suva_appreciation_risques_machines.pdf",
+          47
+        ]
+      ],
+      "answers": [
+        "Les trois étapes de la méthode de réduction des risques sont : 1. Mesures de prévention intrinsèque, 2. Protection et mesures de prévention complémentaires, 3. Informations pour l’utilisation. [suva_appreciation_risques_machines.pdf, p. 43]",
+        "Les trois étapes de la méthode de réduction des risques sont : 1) les mesures de prévention intrinsèque, 2) la protection et les mesures de prévention complémentaires, 3) les informations pour l’utilisation. [suva_appreciation_risques_machines.pdf, p. 43]",
+        "Les trois étapes de la méthode de réduction des risques sont : 1) les mesures de prévention intrinsèque, 2) la protection et les mesures de prévention complémentaires, 3) les informations pour l’utilisation. [suva_appreciation_risques_machines.pdf, p. 43]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            48
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            49
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            17
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            45
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            43
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            52
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            48
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            43
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            59
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            45
+          ]
+        ],
+        "vector": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            48
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            17
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            49
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            16
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            1
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 4,
+        "keyword": 3,
+        "vector": null
+      }
+    },
+    {
+      "id": 17,
+      "category": "method",
+      "question": "Combien de catégories de gravité du dommage la méthode Suva distingue-t-elle ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Cinq.",
+      "expected_sources": [
+        [
+          "suva_appreciation_risques_machines.pdf",
+          32
+        ]
+      ],
+      "answers": [
+        "La méthode Suva subdivise la gravité du dommage en cinq catégories. [suva_appreciation_risques_machines.pdf, p. 32]",
+        "La méthode Suva subdivise la gravité du dommage en cinq catégories. [suva_appreciation_risques_machines.pdf, p. 32]",
+        "La méthode Suva subdivise la gravité du dommage en cinq catégories. [suva_appreciation_risques_machines.pdf, p. 32]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            32
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            74
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            31
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            36
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            34
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            36
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            32
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            74
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            34
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            31
+          ]
+        ],
+        "vector": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            32
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            31
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            74
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            76
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            33
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 2,
+        "vector": 1
+      }
+    },
+    {
+      "id": 18,
+      "category": "method",
+      "question": "Quelle est la différence entre un protecteur et un dispositif de protection ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Le protecteur est une barrière physique ; le dispositif de protection n'en est pas une (l'accès reste possible).",
+      "expected_sources": [
+        [
+          "suva_appreciation_risques_machines.pdf",
+          46
+        ]
+      ],
+      "answers": [
+        "Les protecteurs tels que capes, protecteurs associés à un dispositif de verrouillage ou protecteurs réglables forment des barrières physiques qui empêchent l’accès à la zone dangereuse. [suva_appreciation_risques_machines.pdf, p. 46]  \nÀ l’inverse, les dispositifs de protection (tels que rideaux lumineux, commande bimanuelle, etc.) ne sont pas des barrières physiques. [suva_appreciation_risques_machines.pdf, p. 46]  \nAvec ces mesures de protection, l’accès à la zone dangereuse est possible à tout moment. [suva_appreciation_risques_machines.pdf, p. 46]  \nPar conséquent, les dispositifs de protection doivent éliminer le phénomène dangereux avant que la zone dangereuse ne soit atteinte. [suva_appreciation_risques_machines.pdf, p. 46]",
+        "Les protecteurs tels que capes, protecteurs associés à un dispositif de verrouillage ou protecteurs réglables forment des barrières physiques qui empêchent l’accès à la zone dangereuse. [suva_appreciation_risques_machines.pdf, p. 46]  \nÀ l’inverse, les dispositifs de protection (tels que rideaux lumineux, commande bimanuelle, etc.) ne sont pas des barrières physiques. [suva_appreciation_risques_machines.pdf, p. 46]  \nAvec ces mesures de protection, l’accès à la zone dangereuse est possible à tout moment. [suva_appreciation_risques_machines.pdf, p. 46]  \nPar conséquent, les dispositifs de protection doivent éliminer le phénomène dangereux avant que la zone dangereuse ne soit atteinte. [suva_appreciation_risks_machines.pdf, p. 46]",
+        "Les protecteurs tels que capes, protecteurs associés à un dispositif de verrouillage ou protecteurs réglables forment des barrières physiques qui empêchent l’accès à la zone dangereuse. [suva_appreciation_risques_machines.pdf, p. 46]  \nÀ l’inverse, les dispositifs de protection (tels que rideaux lumineux, commande bimanuelle, etc.) ne sont pas des barrières physiques. [suva_appreciation_risques_machines.pdf, p. 46]  \nAvec ces mesures de protection, l’accès à la zone dangereuse est possible à tout moment. [suva_appreciation_risques_machines.pdf, p. 46]  \nPar conséquent, les dispositifs de protection doivent éliminer le phénomène dangereux avant que la zone dangereuse ne soit atteinte. [suva_appreciation_risques_machines.pdf, p. 46]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": false
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            46
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            48
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            35
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            52
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            46
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            61
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            60
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            26
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            27
+          ]
+        ],
+        "vector": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            46
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            45
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            47
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            61
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            46
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 19,
+      "category": "method",
+      "question": "Que garantit l'application d'une norme de type C ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Une présomption de conformité aux exigences essentielles qu'elle couvre.",
+      "expected_sources": [
+        [
+          "suva_appreciation_risques_machines.pdf",
+          10
+        ]
+      ],
+      "answers": [
+        "L’application par le fabricant de spécifications d’une norme de type C, en se fondant sur l’appréciation des risques, confère toujours une présomption de conformité aux exigences essentielles de santé et de sécurité de la directive relative aux machines couvertes par la norme. [suva_appreciation_risques_machines.pdf, p. 10]",
+        "L’application par le fabricant de spécifications d’une norme de type C, en se fondant sur l’appréciation des risques, confère toujours une présomption de conformité aux exigences essentielles de santé et de sécurité de la directive relative aux machines couvertes par la norme [suva_appreciation_risques_machines.pdf, p. 10].",
+        "L’application par le fabricant de spécifications d’une norme de type C, en se fondant sur l’appréciation des risques, confère toujours une présomption de conformité aux exigences essentielles de santé et de sécurité de la directive relative aux machines couvertes par la norme. [suva_appreciation_risques_machines.pdf, p. 10]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": false,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": false,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            10
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            18
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            43
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            19
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            44
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            10
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            18
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            43
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            44
+          ]
+        ],
+        "vector": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            18
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            10
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            19
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            1
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            16
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 2
+      }
+    },
+    {
+      "id": 20,
+      "category": "multi",
+      "question": "Sur quelles machines les gants sont-ils interdits ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Tour conventionnel, fraiseuse conventionnelle, perceuse à colonne ; en principe pas de gants sur les machines à outils rotatifs.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          7
+        ],
+        [
+          "suva_travail_des_metaux.pdf",
+          9
+        ],
+        [
+          "suva_travail_des_metaux.pdf",
+          11
+        ],
+        [
+          "suva_travail_des_metaux.pdf",
+          4
+        ]
+      ],
+      "answers": [
+        "Les gants sont interdits sur les **machines CNC pour percer, tourner et fraiser** : « Interdiction de porter des gants en mode de réglage » [suva_machine_cnc.pdf, p. 1]. [suva_machine_cnc.pdf, p. 1]\n\nLes gants sont interdits sur la **fraiseuse conventionnelle** : « Interdiction de porter des gants » [suva_travail_des_metaux.pdf, p. 9]. [suva_travail_des_metaux.pdf, p. 9]\n\nLes gants sont interdits sur la **perceuse à colonne** : « Interdiction de porter des gants » [suva_travail_des_metaux.pdf, p. 11]. [suva_travail_des_metaux.pdf, p. 11]",
+        "Les gants sont interdits sur les machines suivantes : la **machine CNC pour percer, tourner et fraiser** [suva_machine_cnc.pdf, p. 1], la **fraiseuse conventionnelle** [suva_travail_des_metaux.pdf, p. 9] et la **perceuse à colonne** [suva_travail_des_metaux.pdf, p. 11].  \nSur la **machine CNC pour percer, tourner et fraiser**, il est indiqué : « **Interdiction de porter des gants en mode de réglage** » [suva_machine_cnc.pdf, p. 1].  \nSur la **fraiseuse conventionnelle**, il est indiqué : « **Interdiction de porter des gants** » [suva_travail_des_metaux.pdf, p. 9].  \nSur la **perceuse à colonne**, il est indiqué : « **Interdiction de porter des gants** » [suva_travail_des_metaux.pdf, p. 11].",
+        "Les gants sont interdits sur la **machine CNC pour percer, tourner et fraiser** en mode de réglage [suva_machine_cnc.pdf, p. 1].  \nLes gants sont interdits sur la **fraiseuse conventionnelle** [suva_travail_des_metaux.pdf, p. 9].  \nLes gants sont interdits sur la **perceuse à colonne** [suva_travail_des_metaux.pdf, p. 11].  \nSur la **machine de cintrage de profilés**, il est indiqué de ne pas utiliser de gants, ou uniquement des modèles bien ajustés [suva_travail_des_metaux.pdf, p. 30]."
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": false,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": false,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": false,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_machine_cnc.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            30
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            9
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            11
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            19
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            52
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            18
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            5
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            17
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_machine_cnc.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            19
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": null,
+        "vector": 2
+      }
+    },
+    {
+      "id": 21,
+      "category": "multi",
+      "question": "Quels équipements de protection faut-il porter avec une meuleuse d'angle ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Protection oculaire, protecteurs d'ouïe, gants de protection, chaussures de sécurité (+ masque si nécessaire).",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          24
+        ],
+        [
+          "suva_travail_des_metaux.pdf",
+          2
+        ]
+      ],
+      "answers": [
+        "Avec une meuleuse d’angle, il faut porter des lunettes-masque, des gants anti-coupure, des tampons auriculaires et des chaussures de sécurité [suva_travail_des_metaux.pdf, p. 2].  \nLe document sur la meuleuse d’angle précise aussi de porter des équipements de protection individuelle : protection oculaire, protecteurs d’ouïe, gants de protection et chaussures de sécurité [suva_travail_des_metaux.pdf, p. 24].",
+        "Avec une meuleuse d’angle, il faut porter des lunettes-masque, des gants anti-coupure, des tampons auriculaires et des chaussures de sécurité [suva_travail_des_metaux.pdf, p. 2].  \nIl faut aussi porter des équipements de protection individuelle, notamment une protection oculaire, des protecteurs d’ouïe, des gants de protection et des chaussures de sécurité [suva_travail_des_metaux.pdf, p. 24].",
+        "Pour une **meuleuse d’angle**, il faut porter des **lunettes-masque**, des **gants anti-coupure**, des **tampons auriculaires** et des **chaussures S1P**. [suva_travail_des_metaux.pdf, p. 2]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": false,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            24
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            24
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            18
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            47
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            24
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            19
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            22
+          ],
+          [
+            "suva_machine_a_meuler.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 22,
+      "category": "multi",
+      "question": "Faut-il porter des gants sur une rouleuse ?",
+      "expected_behavior": "answer",
+      "expected_answer": "Pas de gants, ou uniquement des modèles bien ajustés.",
+      "expected_sources": [
+        [
+          "suva_travail_des_metaux.pdf",
+          29
+        ]
+      ],
+      "answers": [
+        "Non, le port de gants de protection lors de travaux sur des machines avec des pièces en rotation « augmente le risque d’accident et n’est donc pas autorisé » [suva_travail_des_metaux.pdf, p. 4]. Pour la rouleuse, il est indiqué « Ne pas porter de gants, ou uniquement des modèles bien ajustés » [suva_travail_des_metaux.pdf, p. 29].",
+        "Non, le port de gants de protection lors de travaux sur des machines avec des pièces en rotation, comme les rouleaux, « n’est donc pas autorisé » ; pour la rouleuse, il est indiqué de « ne pas porter de gants, ou uniquement des modèles bien ajustés » [suva_travail_des_metaux.pdf, p. 4] [suva_travail_des_metaux.pdf, p. 29]",
+        "Non, le port de gants de protection lors de travaux sur des machines avec des pièces en rotation, comme les rouleaux, augmente le risque d’accident et n’est donc pas autorisé. [suva_travail_des_metaux.pdf, p. 4]  \nSur la rouleuse, il est indiqué de ne pas porter de gants, ou uniquement des modèles bien ajustés. [suva_travail_des_metaux.pdf, p. 29]"
+      ],
+      "per_run": [
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        },
+        {
+          "refused": false,
+          "correct": true,
+          "cited_expected": true,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            29
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            22
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            9
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            29
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            2
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            18
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            46
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            29
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            21
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            9
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            22
+          ],
+          [
+            "suva_fraiseuse_conventionnelle.pdf",
+            1
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": 1,
+        "keyword": 1,
+        "vector": 1
+      }
+    },
+    {
+      "id": 23,
+      "category": "trap",
+      "question": "Quels sont les dangers de nos propres équipements de travail ?",
+      "expected_behavior": "refuse",
+      "expected_answer": "Refus : la fiche « Propres équipements de travail » est un modèle vide (« xxx »).",
+      "expected_sources": [],
+      "answers": [
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents."
+      ],
+      "per_run": [
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            56
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            54
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            55
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            56
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ]
+        ],
+        "vector": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            72
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            19
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            71
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            54
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": null,
+        "keyword": null,
+        "vector": null
+      }
+    },
+    {
+      "id": 24,
+      "category": "out_of_scope",
+      "question": "Quelle est la température de fusion de l'aluminium ?",
+      "expected_behavior": "refuse",
+      "expected_answer": "Refus : absent des documents.",
+      "expected_sources": [],
+      "answers": [
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents."
+      ],
+      "per_run": [
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            70
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            61
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            35
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            22
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_appreciation_risques_machines.pdf",
+            60
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            61
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            70
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            46
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            35
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            36
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            35
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            14
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            75
+          ],
+          [
+            "suva_machines_outils_normes.pdf",
+            2
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": null,
+        "keyword": null,
+        "vector": null
+      }
+    },
+    {
+      "id": 25,
+      "category": "out_of_scope",
+      "question": "Quelle est la capacité de charge maximale d'un pont roulant ?",
+      "expected_behavior": "refuse",
+      "expected_answer": "Refus : les documents disent de ne pas surcharger, sans donner de valeur.",
+      "expected_sources": [],
+      "answers": [
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents."
+      ],
+      "per_run": [
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            46
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            42
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            44
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            47
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            40
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            46
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            47
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            6
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            3
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            44
+          ]
+        ],
+        "vector": [
+          [
+            "suva_travail_des_metaux.pdf",
+            46
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            58
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            42
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            43
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            44
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": null,
+        "keyword": null,
+        "vector": null
+      }
+    },
+    {
+      "id": 26,
+      "category": "out_of_scope",
+      "question": "Quelles sont les règles de sécurité pour une machine de découpe au jet d'eau ?",
+      "expected_behavior": "refuse",
+      "expected_answer": "Refus : machine absente des documents.",
+      "expected_sources": [],
+      "answers": [
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents.",
+        "Je ne trouve pas cette information dans les documents."
+      ],
+      "per_run": [
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        },
+        {
+          "refused": true,
+          "correct": false,
+          "cited_expected": false,
+          "citations_valid": true
+        }
+      ],
+      "retrieved": {
+        "hybrid": [
+          [
+            "suva_travail_des_metaux.pdf",
+            35
+          ],
+          [
+            "suva_machine_cnc.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            52
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            26
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            16
+          ]
+        ],
+        "keyword": [
+          [
+            "suva_travail_des_metaux.pdf",
+            4
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            35
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            52
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            1
+          ],
+          [
+            "suva_appreciation_risques_machines.pdf",
+            52
+          ]
+        ],
+        "vector": [
+          [
+            "suva_machine_cnc.pdf",
+            1
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            35
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            6
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            15
+          ],
+          [
+            "suva_travail_des_metaux.pdf",
+            16
+          ]
+        ]
+      },
+      "rank": {
+        "hybrid": null,
+        "keyword": null,
+        "vector": null
+      }
+    }
+  ]
+}

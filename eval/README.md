@@ -28,3 +28,13 @@ python scripts/evaluate.py --runs 3
 ```
 
 Retrieval is almost deterministic (the vector search is approximate and can vary slightly between runs); generation and judging are not, hence several runs. Retrieval metrics are computed on the first run. The judge is the same chat model that answers, which is a limitation: failures are reviewed by hand.
+
+## Extra questions and prompt change
+
+`questions_holdout.json` holds 5 extra yes/no questions (3 answerable, 2 that must be refused). They were measured before and after a change of the system prompt (`results_*_before_prompt.json`, `results_*_after_prompt.json`). Their baseline failures had been read before the prompt was rewritten, so they are not fully independent.
+
+| Extra questions (3 runs) | Before | After |
+|---|---|---|
+| Correct answers (judge) | 2.0 / 3 | 2.7 / 3 |
+| False refusals | 0.7 / 3 | 0 / 3 |
+| Correct refusals | 2 / 2 | 2 / 2 |
